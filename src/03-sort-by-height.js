@@ -10,7 +10,7 @@
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 function sortByHeight(arr) {
-  const resultArr = arr.concat().filter((number) => number !== -1).sort((a, b) => (a - b));
+  const resultArr = arr.filter((number) => number !== -1).sort((a, b) => (a - b));
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === -1) {
       resultArr.splice(i, 0, -1);
